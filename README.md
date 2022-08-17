@@ -19,6 +19,10 @@ Uber 2.0 clone with React Native.
 - React Native Gesture Handler
 - React Navigation/Native
 - React Navigation/Native Stack
+- React Redux
+- Redux Thunk
+- ReduxJS/Toolkit
+- Reselect
 - RNEUI/Base
 - RNEUI/Themed
 
