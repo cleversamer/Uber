@@ -1,19 +1,22 @@
 import "react-native-gesture-handler";
-import { useState } from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import AppNavigation from "./app/navigation/AppNavigation";
-import AuthNavigation from "./app/navigation/AuthNavigation";
-import AuthContext from "./app/auth/context";
+import { useEffect } from "react";
+import configureStore from "./app/store/configureStore";
+import { Provider } from "react-redux";
+import Navigation from "./app/navigation";
+
+const store = configureStore();
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const unsubscribe = store.subscribe(() => {});
+
+    return unsubscribe;
+  }, []);
 
   return (
-    <AuthContext.Provider value={{ user, setUser }}>
-      <NavigationContainer>
-        {user ? <AppNavigation /> : <AuthNavigation />}
-      </NavigationContainer>
-    </AuthContext.Provider>
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
   );
 };
 

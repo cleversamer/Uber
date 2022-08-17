@@ -1,15 +1,16 @@
-import { useContext } from "react";
-import AuthContext from "./context";
+import { useSelector, useDispatch } from "react-redux";
+import { selectUser, loginUser, logoutUser } from "../store/user";
 
 const useAuth = () => {
-  const { user, setUser } = useContext(AuthContext);
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser());
 
-  const login = () => {
+  const login = (user) => {
     try {
       // Logic for decoding token, getting user object,
       // and store it in SecureStore.
       // Or calling one of firebase authentication methods.
-      setUser(true);
+      dispatch(loginUser(user));
     } catch (err) {
       throw err;
     }
@@ -17,7 +18,7 @@ const useAuth = () => {
 
   const logout = () => {
     try {
-      setUser(false);
+      dispatch(logoutUser());
     } catch (err) {
       throw err;
     }
