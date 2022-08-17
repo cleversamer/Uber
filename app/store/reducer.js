@@ -1,6 +1,6 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import userReducer from "./user";
+import navReducer from "./nav";
 
 export default combineReducers({
-  user: userReducer,
+  nav: navReducer,
 });

@@ -1,23 +1,21 @@
-import { StyleSheet, Text, Button } from "react-native";
+import { StyleSheet, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Screen from "../components/Screen";
-import useAuth from "../auth/useAuth";
+import colors from "../config/colors";
 
 const HomeScreen = (props) => {
-  const { logout } = useAuth();
-
   return (
     <Screen style={styles.container}>
       <StatusBar style="light" />
 
       <Text>Home Screen</Text>
-      <Button title="Logout" onPress={logout} />
     </Screen>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.white,
     flex: 1,
   },
 });
