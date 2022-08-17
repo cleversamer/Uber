@@ -3,7 +3,7 @@ import colors from "../config/colors";
 
 const withTouchableOpacity = (Content, options) => (props) => {
   return (
-    <TouchableOpacity {...options} style={styles.container}>
+    <TouchableOpacity {...options} style={[styles.container, options.style]}>
       <Content {...props} />
     </TouchableOpacity>
   );

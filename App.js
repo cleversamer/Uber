@@ -1,4 +1,5 @@
 import "react-native-gesture-handler";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import configureStore from "./app/store/configureStore";
 import { Provider } from "react-redux";
 import Navigation from "./app/navigation";
@@ -14,8 +15,10 @@ const App = () => {
     <StatusBar style="light" />
   ) : (
     <Provider store={store}>
-      <StatusBar style="light" />
-      <Navigation />
+      <SafeAreaProvider>
+        <StatusBar style="light" />
+        <Navigation />
+      </SafeAreaProvider>
     </Provider>
   );
 };
