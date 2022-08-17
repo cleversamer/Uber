@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "uber-clone",
+    "slug": "uber-clone",
+    "platforms": ["ios", "android"],
+    "description": "Uber 2.0 clone with React Native.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./app/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cleversamer.uber",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.cleversamer.uber",
+      "versionCode": 1
+    }
+  }
+}
