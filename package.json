@@ -31,7 +31,8 @@
     "react-native-gesture-handler": "^2.5.0",
     "react-redux": "^8.0.2",
     "redux-thunk": "^2.4.1",
-    "reselect": "^4.1.6"
+    "reselect": "^4.1.6",
+    "tailwind-react-native-classnames": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

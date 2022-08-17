@@ -25,6 +25,7 @@ Uber 2.0 clone with React Native.
 - Reselect
 - RNEUI/Base
 - RNEUI/Themed
+- Tailwind React Native Classnames
 
 ### Installing
 
